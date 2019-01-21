@@ -1,4 +1,4 @@
-public class BinarySearchTree {
+public class BinaryTreeTraversal {
     public static void inorder (Node root){ // Each child of a tree is a root of its subtree.
         if (root.left != null){
             inorder(root.left);
