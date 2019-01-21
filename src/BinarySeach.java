@@ -14,7 +14,9 @@ public class BinarySeach {
 
         //if match found return true (base case
         if (numbers[mid] == key){
+            System.out.printf("Returned index: %d \n", mid);
             return true;
+
         } else if (key < numbers[mid]){ // key is smaller than element at the midpoint, search to right and recalulate mid excluding previous mid
             return searchRecursive(numbers,key, left, mid -1);
         } else { // if key is larger than element at midpoint, search to the right, recalculate new mid excluding previous mid hence mid+1
@@ -25,11 +27,11 @@ public class BinarySeach {
     public static void main(String[] args) {
         int[] numbers = {7,8,9,0,10,11,12,14};
         Arrays.sort(numbers);
-        System.out.println(Arrays.toString(numbers));
-        int key = 1;
+       // System.out.println(Arrays.toString(numbers));
+        int key = 11;
         int left = 0;
         int right = numbers.length;
-        System.out.println(searchRecursive(numbers, key, left, right ));
+        System.out.printf("Is there a match? %b", searchRecursive(numbers, key, left, right ));
 
 
 
