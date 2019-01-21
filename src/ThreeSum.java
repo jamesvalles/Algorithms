@@ -1,8 +1,6 @@
-import javafx.util.Pair;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Hashtable;
+
 
 //Quadratic Time, sorted array
 public class ThreeSum {
