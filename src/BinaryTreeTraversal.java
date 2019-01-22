@@ -4,6 +4,7 @@ public class BinaryTreeTraversal {
             inorder(root.left);
         }
         System.out.println(root.key);
+
         if (root.right != null){
             inorder(root.right);
         }
