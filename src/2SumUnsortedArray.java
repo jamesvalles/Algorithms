@@ -1,6 +1,6 @@
 import java.util.HashMap;
 
-//Algorithm provides x+y = t in O(n) when array is unsorted. Must ensure hashing is done properly. 
+//Algorithm provides x+y = 1000 in O(n) when array is unsorted. Must ensure hashing is done properly. 
 
 public class XYHash {
 
