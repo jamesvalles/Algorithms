@@ -7,12 +7,12 @@ public class ThreeSum {
 
     public static void main(String[] args) {
         int[] numbers = new int[]{10, 20, 15, 25, 35};
-        int target = 85;
+        int target =75;
         boolean isMatch = false;
 
         Arrays.sort(numbers); // sort elements in array
-
-        for(int i = 0; i < numbers.length - 2; i++ ) {
+            int i = 0;
+        //for(int i = 0; i < numbers.length - 2; i++ ) {
             int j = i + 1; // element at beginning of array + 1
             int k = numbers.length - 1; //element at end of array
             int partial_target = target - numbers[i]; //our target -  first element of array (we need to find two digits that will add up to this
@@ -32,7 +32,7 @@ public class ThreeSum {
                     j++; // if we are under we can continue to increment with high value
                     continue;
                 }
-            }
+
 
         }
     }

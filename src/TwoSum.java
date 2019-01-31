@@ -7,22 +7,25 @@ import java.util.Hashtable;
 public class TwoSum {
 
     public static void main(String[] args) {
-        int s = 15;
         int[] numbers = new int[]{1, 3, 10, 15, 25};
         int target = 40;
-        int i = 0;
-        int j = numbers.length -1 ;
 
 
-        while(i < numbers.length - 1  && j > 0 ){
-            int sum = numbers[i] + numbers[j];
-            if( sum == target){
-                System.out.println("2-SUM Match found.");
+        int i = 0; //start i at 0 index
+        int j = numbers.length -1 ; //start j at ..length-1 index
+
+
+        while(j > 0 && i < numbers.length - 1  && i < j){
+
+
+            int sum = numbers[i] + numbers[j]; //what is the sum
+            if( sum == target){ //if sum equals target
+                System.out.println("Match found.");
                 break;
-            }else if (sum < target){
+            }else if (sum < target){ //if sum is smaller than target increment i
                 i++;
                 continue;
-            } else if (sum > target){
+            } else if (sum > target){ //if sum is greater than target decrement j
                 j--;
                 continue;
             }else {}

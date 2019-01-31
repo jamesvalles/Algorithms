@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 /* James Valles - Parsing a News API and adding titles to array*/
 
-public class ParsingRestApi {
+public class ParsingRestAPI {
 
 
     public static void main(String[] args) throws IOException, ParseException {
@@ -19,7 +19,7 @@ public class ParsingRestApi {
         String inline = ""; // this stores JSCON data in String format.
 
         //url api key
-        URL url = new URL("https://newsapi.org/v2/top-headlines?sources=associated-press&apiKey=[enter your key from https://newsapi.org]");
+        URL url = new URL("https://newsapi.org/v2/top-headlines?sources=associated-press&apiKey=5b488941864043de89251ef3e9a21a1e");
 
         //open connection
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
