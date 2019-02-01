@@ -2,8 +2,11 @@
   <library name="json-simple-1.1.1">
     <CLASSES>
       <root url="jar://$USER_HOME$/Downloads/json-simple-1.1.1.jar!/" />
+      <root url="file://$USER_HOME$/Downloads/mysql-connector-java-5.1.47" />
+      <root url="jar://$USER_HOME$/Downloads/mysql-connector.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
+    <jarDirectory url="file://$USER_HOME$/Downloads/mysql-connector-java-5.1.47" recursive="false" />
   </library>
 </component>
