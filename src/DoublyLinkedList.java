@@ -8,8 +8,10 @@ public class DoublyLinkedList {
         this.size = 0;
     }
 
-    public void addNode(int data) {
+    //Add node to the front
+    public void addToFront(int data) {
 
+        //check if there is a head, if not create one
         if (head == null) {
             head = new DLinkedNode(null, data, null);
         } else {
@@ -19,6 +21,27 @@ public class DoublyLinkedList {
         }
         size++;
     }
+
+    // Add node at the very end
+    public void addToBack(int data) {
+
+        //check if there is a head (empty list) if not create one
+        if (head == null) {
+            head = new DLinkedNode(null, data, null);
+        }
+
+        DLinkedNode current = head;
+
+        //traverse to end of list, set last element in list to current
+        while(current.next != null){
+          current = current.next;
+        }
+        //create node and set to end of list
+        current.next = new DLinkedNode(current, data, null);
+    }
+
+
+
 
 
     public int getSize() {
@@ -34,11 +57,6 @@ public class DoublyLinkedList {
     }
 
 
-    @Override
-    public String toString() {
-        return super.toString();
-    }
-
     public void print() {
         DLinkedNode current = head;
         while (current != null) {
@@ -49,15 +67,20 @@ public class DoublyLinkedList {
 
     public static void main(String[] args) {
         DoublyLinkedList list = new DoublyLinkedList();
-        list.addNode(34);
-        list.addNode(67);
-        list.addNode(38);
-        list.addNode(39);
+        list.addToFront(34);
+        list.addToFront(67);
+        list.addToFront(38);
+        list.addToFront(39);
+        list.addToBack(39);
+
+
 
         list.print();
         System.out.println("Head of list: " + list.head.getData());
         System.out.println("Next item in list: " + list.head.next.getData());
         System.out.println("Size of this LinkedList: " + list.size);
+
+
     }
 
 }
