@@ -38,6 +38,7 @@ public class DoublyLinkedList {
         }
         //create node and set to end of list
         current.next = new DLinkedNode(current, data, null);
+        size++;
     }
 
 
